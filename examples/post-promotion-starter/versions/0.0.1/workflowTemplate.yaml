@@ -4,7 +4,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.post-promotion-starter.0.0.1
+  name: argo-hub-lucas.post-promotion-starter.0.0.1
   annotations:
     codefresh.io/workflow-origin: promotion
     version: 0.0.1

@@ -56,7 +56,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-kustomize-example
 spec:
-  serviceAccountName: argo-hub.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -64,7 +64,7 @@ spec:
         tasks:
           - name: kust-stage
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env
             arguments:
               parameters:
@@ -99,7 +99,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-helm-dependency-example
 spec:
-  serviceAccountName: argo-hub.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -107,7 +107,7 @@ spec:
         tasks:
           - name: dep-stage
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env
             arguments:
               parameters:
@@ -142,7 +142,7 @@ kind: WorkflowTemplate
 metadata:
   name: promotion-pipeline-example
 spec:
-  serviceAccountName: argo-hub.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   arguments:
     parameters:
@@ -164,7 +164,7 @@ spec:
           - name: promote-from-src-to-dest-env
             depends: "set-commit-details.Succeeded"
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env
             arguments:
               parameters:
@@ -241,7 +241,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-deployment-yaml-example
 spec:
-  serviceAccountName: argo-hub.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -249,7 +249,7 @@ spec:
         tasks:
           - name: dep-stage
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env
             arguments:
               parameters:

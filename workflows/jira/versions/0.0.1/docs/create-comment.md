@@ -33,7 +33,7 @@ spec:
             tasks:
             -   name: create-comment
                 templateref:
-                    name: argo-hub.jira.0.0.1
+                    name: argo-hub-lucas.jira.0.0.1
                     template: create-comment
                 arguments:
                     parameters:

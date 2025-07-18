@@ -34,7 +34,7 @@ Anyone who builds many Argo workflows knows that after a while you end up reusin
 Get a full-featured visualized experience here https://codefresh.io/argo/hub/
 
 ### WorkflowTemplate manifest conventions
-* Every workflow template has a name that follows the convention: `argo-hub.{NAME}.{VERSION}`
+* Every workflow template has a name that follows the convention: `argo-hub-lucas.{NAME}.{VERSION}`
 * Every template within the workflowTemplate must reference the service account that is declared in the rbac.yaml manifest
 
 To build an extensive UI while still using use of the original Kubernetes manifest, we are leverging annotations.
@@ -111,7 +111,7 @@ Using Argo CD application set with following config file
   "destNamespace": "codefresh-v2-production",
   "destServer": "https://kubernetes.default.svc",
   "srcPath": ".",
-  "srcRepoURL": "https://github.com/codefresh-io/argo-hub.git",
+  "srcRepoURL": "https://github.com/codefresh-io/argo-hub-lucas.git",
   "srcTargetRevision": "",
   "labels": { "codefresh_io_entity": "git-source" },
   "exclude": "**/images/**/*",

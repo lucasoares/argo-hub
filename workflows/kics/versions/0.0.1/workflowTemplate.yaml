@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.kics.0.0.1
+  name: argo-hub-lucas.kics.0.0.1
   annotations:
     argo-hub/version: "0.0.1"
     argo-hub/description: "Execute operations against KICS"
@@ -14,7 +14,7 @@ metadata:
     argo-hub/icon_url: "https://user-images.githubusercontent.com/74001161/160897079-7d8ac970-8843-49ac-b1f2-082c2bb40ceb.svg"
     argo-hub/icon_background: "#f4f4f4"
 spec:
-  serviceAccountName: argo-hub.kics.0.0.1
+  serviceAccountName: argo-hub-lucas.kics.0.0.1
   templates:
     - name: kics-scan-report
       metadata:

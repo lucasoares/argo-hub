@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.sendgrid
+  name: argo-hub-lucas.sendgrid
   annotations:
     argo-hub/description: 'Execute operations against Sendgrid'
     argo-hub/categories: 'messaging'

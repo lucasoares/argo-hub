@@ -32,12 +32,12 @@ spec:
         tasks:
           - name: submit
             templateRef:
-              name: argo-hub.argo-workflows.0.0.3
+              name: argo-hub-lucas.argo-workflows.0.0.3
               template: submit-workflow
             arguments:
               parameters:
                 - name: TEMPLATE_NAME
-                  value: 'argo-hub.argo-workflows-utils.0.0.1'
+                  value: 'argo-hub-lucas.argo-workflows-utils.0.0.1'
                 - name: ENTRYPOINT
                   value: 'echo'
 ```

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.datadog
+  name: argo-hub-lucas.datadog
   annotations:
     argo-hub/description: 'Execute operations against Monday'
     argo-hub/categories: 'task management'

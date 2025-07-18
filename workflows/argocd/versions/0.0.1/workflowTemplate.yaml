@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.argocd.0.0.1
+  name: argo-hub-lucas.argocd.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Templates that execute operations against an ArgoCD application'
@@ -51,7 +51,7 @@ spec:
   # ArgoCD app sync
   # Cannot just anchor the whole list item because overrides will not function properlc
   - name: sync
-    serviceAccountName: &serviceAccountName argo-hub.argocd.0.0.1
+    serviceAccountName: &serviceAccountName argo-hub-lucas.argocd.0.0.1
     metadata:
       annotations: &annotations
         argo-hub-template/description: 'Sync an application in ArgoCD'

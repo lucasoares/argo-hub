@@ -49,7 +49,7 @@ spec:
       tasks:
       - name: test-image
         templateRef:
-          name: argo-hub.ci-simple.0.0.1
+          name: argo-hub-lucas.ci-simple.0.0.1
           template: test
         arguments:
           parameters:

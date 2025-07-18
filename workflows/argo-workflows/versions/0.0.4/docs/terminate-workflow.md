@@ -21,7 +21,7 @@ no outputs
 ```
       - name: terminate
         templateRef:
-          name: argo-hub.argo-workflows.0.0.4
+          name: argo-hub-lucas.argo-workflows.0.0.4
           template: terminate-workflow
         arguments:
           parameters:
@@ -33,7 +33,7 @@ no outputs
 ```
       - name: terminate
         templateRef:
-          name: argo-hub.argo-workflows.0.0.4
+          name: argo-hub-lucas.argo-workflows.0.0.4
           template: terminate-workflow
         arguments:
           parameters:
@@ -45,7 +45,7 @@ no outputs
 ```
       - name: terminate
         templateRef:
-          name: argo-hub.argo-workflows.0.0.4
+          name: argo-hub-lucas.argo-workflows.0.0.4
           template: terminate-workflow
         arguments:
           parameters:
@@ -57,7 +57,7 @@ no outputs
 ```
       - name: terminate
         templateRef:
-          name: argo-hub.argo-workflows.0.0.4
+          name: argo-hub-lucas.argo-workflows.0.0.4
           template: terminate-workflow
         arguments:
           parameters:

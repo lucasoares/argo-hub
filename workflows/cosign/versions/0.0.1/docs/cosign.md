@@ -19,7 +19,7 @@ no outputs
 ```
   - name: cosign-image
     templateRef:
-      name: argo-hub.cosign.0.0.1
+      name: argo-hub-lucas.cosign.0.0.1
       template: cosign
     arguments:
       parameters:

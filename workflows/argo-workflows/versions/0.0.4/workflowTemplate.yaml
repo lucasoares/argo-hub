@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.argo-workflows.0.0.4
+  name: argo-hub-lucas.argo-workflows.0.0.4
   annotations:
     argo-hub/version: '0.0.4'
     argo-hub/description: 'Templates that interact with your Argo Workflow instance'
@@ -56,7 +56,7 @@ spec:
           -l=git-revision={{inputs.parameters.GIT_REVISION }},git-branch={{
           inputs.parameters.GIT_BRANCH }},workflow-template-name={{
           inputs.parameters.TEMPLATE_NAME }},codefresh.io/submit-wf-parent-uid={{ workflow.uid }} --output=json) > output
-      serviceAccountName: argo-hub.argo-workflows.0.0.4
+      serviceAccountName: argo-hub-lucas.argo-workflows.0.0.4
 
     - name: terminate-workflow
       metadata:

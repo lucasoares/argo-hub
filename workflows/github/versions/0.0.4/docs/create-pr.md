@@ -34,7 +34,7 @@ spec:
       tasks:
       - name: create-pr
         templateRef:
-          name: argo-hub.github.0.0.4
+          name: argo-hub-lucas.github.0.0.4
           template: create-pr
         arguments:
           artifacts:

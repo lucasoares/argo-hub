@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.yarn
+  name: argo-hub-lucas.yarn
   annotations:
     argo-hub/description: 'Execute yarn operations'
     argo-hub/categories: 'registry,node'

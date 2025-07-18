@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.kaniko.0.0.1
+  name: argo-hub-lucas.kaniko.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'A template for building Docker images using kaniko'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: build
-      serviceAccountName: argo-hub.kaniko.0.0.1
+      serviceAccountName: argo-hub-lucas.kaniko.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'A wrapper on top of kaniko CLI'

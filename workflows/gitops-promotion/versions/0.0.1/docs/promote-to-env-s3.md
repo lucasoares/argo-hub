@@ -63,7 +63,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-kustomize-example
 spec:
-  serviceAccountName: argo-hub.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -72,7 +72,7 @@ spec:
           - name: git-clone
             # Output S3 artifact repo is called "repo"
             templateRef:
-              name: argo-hub.git.0.0.2
+              name: argo-hub-lucas.git.0.0.2
               template: clone-s3
             arguments:
               parameters:
@@ -82,7 +82,7 @@ spec:
                 value: git-auth
           - name: promote-kustomize-image
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-to-env
             arguments:
               artifacts:

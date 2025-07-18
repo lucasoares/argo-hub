@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.ci-simple.0.0.1
+  name: argo-hub-lucas.ci-simple.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'This Workflow Template is used to create your first CI pipeline in CSDP'
@@ -71,7 +71,7 @@ spec:
           # https://codefresh.io/argohub/workflow-template/kaniko
           - name: build-docker-image
             templateRef:
-              name: argo-hub.kaniko.0.0.1
+              name: argo-hub-lucas.kaniko.0.0.1
               template: build
             arguments:
               parameters:
@@ -93,7 +93,7 @@ spec:
           #  https://codefresh.io/argohub/workflow-template/CSDP-metadata
           - name: report-image-info
             templateRef:
-              name: argo-hub.codefresh-csdp.0.0.6
+              name: argo-hub-lucas.codefresh-csdp.0.0.6
               template: report-image-info
             arguments:
               parameters:

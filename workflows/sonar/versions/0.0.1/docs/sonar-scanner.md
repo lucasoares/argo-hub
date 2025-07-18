@@ -32,7 +32,7 @@ spec:
             tasks:
             -   name: clone-step
                 templateRef:
-                    name: argo-hub.git.0.0.2
+                    name: argo-hub-lucas.git.0.0.2
                     template: clone
                 arguments:
                     parameters:
@@ -47,7 +47,7 @@ spec:
             -   name: sonar-scanner
                 dependencies: [clone-step]
                 templateref:
-                    name: argo-hub.sonar.0.0.1
+                    name: argo-hub-lucas.sonar.0.0.1
                     template: sonar-scanner
                 arguments:
                     artifacts:

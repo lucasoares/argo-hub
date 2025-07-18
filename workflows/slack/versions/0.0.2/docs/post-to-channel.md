@@ -29,7 +29,7 @@ spec:
       tasks:
       - name: send-message
         templateRef:
-          name: argo-hub.slack.0.0.2
+          name: argo-hub-lucas.slack.0.0.2
           template: post-to-channel
         arguments:
           parameters:

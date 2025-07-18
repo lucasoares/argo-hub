@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.jira-sonar.0.0.1
+  name: argo-hub-lucas.jira-sonar.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Workflow template for a full deployment using jira, sonar and a canary rollout'
@@ -129,7 +129,7 @@ spec:
           # https://codefresh.io/argohub/workflow-template/git
           - name: clone-step-repo
             templateRef:
-              name: argo-hub.git.0.0.2
+              name: argo-hub-lucas.git.0.0.2
               template: clone
             arguments:
               parameters:
@@ -146,7 +146,7 @@ spec:
           # https://codefresh.io/argohub/workflow-template/git
           - name: clone-step-deployment
             templateRef:
-              name: argo-hub.git.0.0.2
+              name: argo-hub-lucas.git.0.0.2
               template: clone
             arguments:
               parameters:
@@ -163,7 +163,7 @@ spec:
           # https://codefresh.io/argohub/workflow-template/jira
           - name: create-jira
             templateRef:
-              name: argo-hub.jira.0.0.1
+              name: argo-hub-lucas.jira.0.0.1
               template: create-issue
             arguments:
               parameters:
@@ -193,7 +193,7 @@ spec:
           - name: build-docker-image
             dependencies: [clone-step-repo, clone-step-deployment]
             templateRef:
-              name: argo-hub.kaniko.0.0.1
+              name: argo-hub-lucas.kaniko.0.0.1
               template: build
             arguments:
               parameters:
@@ -217,7 +217,7 @@ spec:
           - name: transition-jira-in-progress
             dependencies: [build-docker-image, create-jira]
             templateRef:
-              name: argo-hub.jira.0.0.1
+              name: argo-hub-lucas.jira.0.0.1
               template: issue-transition-status
             arguments:
               parameters:
@@ -243,7 +243,7 @@ spec:
           - name: report-image-info
             dependencies: [transition-jira-in-progress]
             templateRef:
-              name: argo-hub.codefresh-csdp.1.1.1
+              name: argo-hub-lucas.codefresh-csdp.1.1.1
               template: report-image-info
             arguments:
               parameters:
@@ -267,7 +267,7 @@ spec:
           - name: image-enricher-git-info
             dependencies: [report-image-info]
             templateRef:
-              name: argo-hub.codefresh-csdp.1.1.0
+              name: argo-hub-lucas.codefresh-csdp.1.1.0
               template: image-enricher-git-info
             arguments:
               parameters:
@@ -295,7 +295,7 @@ spec:
           - name: image-enricher-jira-info
             dependencies: [report-image-info]
             templateRef:
-              name: argo-hub.codefresh-csdp.1.1.0
+              name: argo-hub-lucas.codefresh-csdp.1.1.0
               template: image-enricher-jira-info
             arguments:
               parameters:
@@ -334,7 +334,7 @@ spec:
           - name: scan-repo
             dependencies: [test-image]
             templateRef:
-              name: argo-hub.sonar.0.0.1
+              name: argo-hub-lucas.sonar.0.0.1
               template: sonar-scanner
             arguments:
               artifacts:
@@ -353,7 +353,7 @@ spec:
           - name: create-jira-comment
             dependencies: [scan-repo]
             templateRef:
-              name: argo-hub.jira.0.0.1
+              name: argo-hub-lucas.jira.0.0.1
               template: create-comment
             arguments:
               parameters:
@@ -377,7 +377,7 @@ spec:
           - name: transition-jira-ready-for-review
             dependencies: [scan-repo]
             templateRef:
-              name: argo-hub.jira.0.0.1
+              name: argo-hub-lucas.jira.0.0.1
               template: issue-transition-status
             arguments:
               parameters:
@@ -403,7 +403,7 @@ spec:
           - name: promote-kustomize-image
             dependencies: [scan-repo]
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-to-env
             arguments:
               parameters:
@@ -465,7 +465,7 @@ spec:
           - name: transition-jira-done
             dependencies: [rollout-100]
             templateRef:
-              name: argo-hub.jira.0.0.1
+              name: argo-hub-lucas.jira.0.0.1
               template: issue-transition-status
             arguments:
               parameters:

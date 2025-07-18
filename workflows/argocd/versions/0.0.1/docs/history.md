@@ -36,7 +36,7 @@ spec:
       tasks:
       - name: history
         templateRef:
-          name: argo-hub.argocd.0.0.1
+          name: argo-hub-lucas.argocd.0.0.1
           template: history
         arguments:
           parameters:

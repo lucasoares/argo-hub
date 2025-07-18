@@ -49,7 +49,7 @@ spec:
         tasks:
           - name: kics
             templateRef:
-              name: argo-hub.kics.0.0.1
+              name: argo-hub-lucas.kics.0.0.1
               template: kics-scan
             arguments:
               parameters:

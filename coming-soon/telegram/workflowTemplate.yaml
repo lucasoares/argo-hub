@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.telegram
+  name: argo-hub-lucas.telegram
   annotations:
     argo-hub/description: 'Execute operations against Telegram'
     argo-hub/categories: 'messaging'

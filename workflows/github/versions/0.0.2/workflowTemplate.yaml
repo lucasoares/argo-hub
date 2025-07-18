@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.github.0.0.2
+  name: argo-hub-lucas.github.0.0.2
   annotations:
     argo-hub/version: '0.0.2'
     argo-hub/description: 'Templates that execute operations against GitHub'

@@ -58,7 +58,7 @@ spec:
             tasks:
             -   name: clone-step
                 templateRef:
-                    name: argo-hub.git.0.0.2
+                    name: argo-hub-lucas.git.0.0.2
                     template: clone
                 arguments:
                     parameters:
@@ -73,7 +73,7 @@ spec:
             -   name: codecov-report
                 depends: clone-step
                 templateRef:
-                    name: argo-hub.codecov.0.0.1
+                    name: argo-hub-lucas.codecov.0.0.1
                     template: codecov-report
                 arguments:
                     artifacts:

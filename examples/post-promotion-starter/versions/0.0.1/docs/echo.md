@@ -34,7 +34,7 @@ spec:
       tasks:
       - name: post-promotion-starter
         templateRef:
-          name: argo-hub.post-promotion-starter.0.0.1
+          name: argo-hub-lucas.post-promotion-starter.0.0.1
           template: post-promotion-starter
         arguments:
           parameters:

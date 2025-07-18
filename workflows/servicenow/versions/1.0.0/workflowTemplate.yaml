@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.servicenow.1.0.0
+  name: argo-hub-lucas.servicenow.1.0.0
   annotations:
     argo-hub/version: '1.0.0'
     argo-hub/categories: 'utilities'

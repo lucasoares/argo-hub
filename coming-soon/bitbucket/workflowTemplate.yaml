@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.bitbucket
+  name: argo-hub-lucas.bitbucket
   annotations:
     argo-hub/description: 'Execute operations against Bitbucket'
     argo-hub/categories: 'git'

@@ -56,7 +56,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-kustomize-example
 spec:
-  serviceAccountName: argo-hub.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -64,7 +64,7 @@ spec:
         tasks:
           - name: promote-kustomize-image
             templateRef:
-              name: argo-hub.gitops-promotion.0.0.1
+              name: argo-hub-lucas.gitops-promotion.0.0.1
               template: promote-to-env
             arguments:
               parameters:

@@ -14,7 +14,7 @@ metadata:
     argo-hub/icon_url: 'https://cdn.jsdelivr.net/gh/codefresh-io/argo-hub@main/examples/time-of-day/assets/icon.svg'
     argo-hub/icon_background: "#f4f4f4"
 spec:
-  serviceAccountName: argo-hub.time-of-day.0.0.1
+  serviceAccountName: argo-hub-lucas.time-of-day.0.0.1
   entrypoint: example-workflow
   arguments:
     parameters:

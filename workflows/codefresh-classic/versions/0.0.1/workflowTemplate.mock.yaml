@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.codefresh-classic-mock.0.0.1
+  name: argo-hub-lucas.codefresh-classic-mock.0.0.1
 spec:
   entrypoint: main
   templates:
@@ -20,7 +20,7 @@ spec:
         tasks:
           - name: mock
             templateRef:
-              name: argo-hub.argo-workflows-utils.0.0.1
+              name: argo-hub-lucas.argo-workflows-utils.0.0.1
               template: echo
             arguments:
               parameters:

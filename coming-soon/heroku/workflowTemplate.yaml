@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub.heroku
+  name: argo-hub-lucas.heroku
   annotations:
     argo-hub/description: 'Execute operations against Heroku'
     argo-hub/categories: 'deployment'

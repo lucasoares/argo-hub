@@ -60,7 +60,7 @@ spec:
             tasks:
             -   name: clone-step
                 templateRef:
-                    name: argo-hub.git.0.0.2
+                    name: argo-hub-lucas.git.0.0.2
                     template: clone
                 arguments:
                     parameters:
@@ -75,7 +75,7 @@ spec:
             -   name: datree-policy-check
                 dependd: clone-step
                 templateRef:
-                    name: argo-hub.datree.0.0.1
+                    name: argo-hub-lucas.datree.0.0.1
                     template: datree-policy-check
                 arguments:
                     artifacts:

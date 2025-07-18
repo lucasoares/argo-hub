@@ -32,7 +32,7 @@ spec:
       tasks:
       - name: clone-step
         templateRef:
-          name: argo-hub.git.0.0.2
+          name: argo-hub-lucas.git.0.0.2
           template: clone
         arguments:
           parameters:
