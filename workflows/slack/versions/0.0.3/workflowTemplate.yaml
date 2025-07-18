@@ -38,7 +38,7 @@ spec:
       container:
         name: main
         imagePullPolicy: Always
-        image: quay.io/codefreshplugins/argo-hub-slack-send-message:0.0.3-main
+        image: blipcontainerregistry.azurecr.io/argo-hub-slack-send-message:0.0.3-main
         command:
           - node
           - /usr/src/app/index.js
@@ -93,7 +93,7 @@ spec:
       container:
         name: main
         imagePullPolicy: Always
-        image: quay.io/codefreshplugins/argo-hub-slack-post-to-channel:0.0.3-main
+        image: blipcontainerregistry.azurecr.io/argo-hub-slack-post-to-channel:0.0.3-main
         command:
           - python
           - /slack/slack.py
