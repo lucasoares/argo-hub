@@ -32,7 +32,7 @@ spec:
       tasks:
       - name: clone
         templateRef:
-          name: argo-hub-lucas.git.0.0.3
+          name: argo-hub.git.0.0.3
           template: clone-s3
         arguments:
           parameters:

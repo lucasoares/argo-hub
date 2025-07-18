@@ -34,7 +34,7 @@ spec:
       tasks:
       - name: create-pr-comment
         templateRef:
-          name: argo-hub-lucas.gitlab.0.0.1
+          name: argo-hub.gitlab.0.0.1
           template: create-pr-comment
         arguments:
           parameters:

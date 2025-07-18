@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.webhook
+  name: argo-hub.webhook
   annotations:
     argo-hub/description: 'Execute generic webhooks'
     argo-hub/categories: 'webhook'

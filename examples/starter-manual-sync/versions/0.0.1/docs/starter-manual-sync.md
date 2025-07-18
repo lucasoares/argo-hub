@@ -37,7 +37,7 @@ spec:
       tasks:
       - name: starter-manual-sync
         templateRef:
-          name: argo-hub-lucas.starter-manual-sync.0.0.1
+          name: argo-hub.starter-manual-sync.0.0.1
           template: starter-manual-sync
         arguments:
           parameters:

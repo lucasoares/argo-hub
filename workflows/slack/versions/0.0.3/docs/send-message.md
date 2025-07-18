@@ -50,7 +50,7 @@ spec:
       tasks:
       - name: send-message
         templateRef:
-          name: argo-hub-lucas.slack.0.0.3
+          name: argo-hub.slack.0.0.3
           template: send-message
         arguments:
           parameters:

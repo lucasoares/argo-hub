@@ -34,7 +34,7 @@ spec:
             tasks:
             -   name: issue-transition-status
                 templateref:
-                    name: argo-hub-lucas.jira.0.0.2
+                    name: argo-hub.jira.0.0.2
                     template: issue-transition-status
                 arguments:
                     parameters:

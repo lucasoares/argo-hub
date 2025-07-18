@@ -34,7 +34,7 @@ spec:
       tasks:
       - name: wait
         templateRef:
-          name: argo-hub-lucas.argocd.0.0.1
+          name: argo-hub.argocd.0.0.1
           template: wait
         arguments:
           parameters:

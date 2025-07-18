@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.github.0.0.1
+  name: argo-hub.github.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Execute operations against Github'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: commit-status
-      serviceAccountName: argo-hub-lucas.github.0.0.1
+      serviceAccountName: argo-hub.github.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Report a commit status check'
@@ -68,7 +68,7 @@ spec:
                 key: token
 
     - name: create-pr
-      serviceAccountName: argo-hub-lucas.github.0.0.1
+      serviceAccountName: argo-hub.github.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Create a pull request'

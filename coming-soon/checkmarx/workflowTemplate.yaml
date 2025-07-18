@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.checkmarx
+  name: argo-hub.checkmarx
   annotations:
     argo-hub/description: 'Execute operations with Checkmarx/kics'
     argo-hub/categories: 'security'

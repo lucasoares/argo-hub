@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.upgrade-cluster.0.0.1
+  name: argo-hub.upgrade-cluster.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'This Workflow Template is used to upgrade a GitOps Runtime'
@@ -17,7 +17,7 @@ spec:
   entrypoint: upgrade
   templates:
     - name: upgrade
-      serviceAccountName: argo-hub-lucas.upgrade-cluster.0.0.1
+      serviceAccountName: argo-hub.upgrade-cluster.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Upgrade a runtime'

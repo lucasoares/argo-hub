@@ -35,7 +35,7 @@ spec:
             tasks:
             -   name: update-comment
                 templateref:
-                    name: argo-hub-lucas.jira.0.0.2
+                    name: argo-hub.jira.0.0.2
                     template: update-comment
                 arguments:
                     parameters:

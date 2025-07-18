@@ -39,7 +39,7 @@ spec:
       tasks:
       - name: create-pr-codefresh
         templateRef:
-          name: argo-hub-lucas.github.0.0.4
+          name: argo-hub.github.0.0.4
           template: create-pr-codefresh
         arguments:
           parameters:

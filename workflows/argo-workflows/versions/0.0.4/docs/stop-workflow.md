@@ -23,7 +23,7 @@ no outputs
 ```
       - name: stop
         templateRef:
-          name: argo-hub-lucas.argo-workflows.0.0.4
+          name: argo-hub.argo-workflows.0.0.4
           template: stop-workflow
         arguments:
           parameters:
@@ -35,7 +35,7 @@ no outputs
 ```
       - name: stop
         templateRef:
-          name: argo-hub-lucas.argo-workflows.0.0.4
+          name: argo-hub.argo-workflows.0.0.4
           template: stop-workflow
         arguments:
           parameters:
@@ -47,7 +47,7 @@ no outputs
 ```
       - name: stop
         templateRef:
-          name: argo-hub-lucas.argo-workflows.0.0.4
+          name: argo-hub.argo-workflows.0.0.4
           template: stop-workflow
         arguments:
           parameters:
@@ -59,7 +59,7 @@ no outputs
 ```
       - name: stop
         templateRef:
-          name: argo-hub-lucas.argo-workflows.0.0.4
+          name: argo-hub.argo-workflows.0.0.4
           template: stop-workflow
         arguments:
           parameters:
@@ -73,7 +73,7 @@ no outputs
 ```
       - name: resume
         templateRef:
-          name: argo-hub-lucas.argo-workflows.0.0.4
+          name: argo-hub.argo-workflows.0.0.4
           template: resume-workflow
         arguments:
           parameters:

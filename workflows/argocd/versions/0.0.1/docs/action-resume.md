@@ -35,7 +35,7 @@ spec:
       tasks:
       - name: action-resume
         templateRef:
-          name: argo-hub-lucas.argocd.0.0.1
+          name: argo-hub.argocd.0.0.1
           template: action-resume
         arguments:
           parameters:

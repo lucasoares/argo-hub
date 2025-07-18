@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.argo-workflows.0.0.2
+  name: argo-hub.argo-workflows.0.0.2
   annotations:
     argo-hub/version: '0.0.2'
     argo-hub/description: 'Templates that interact with your Argo Workflow instance'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: submit-workflow
-      serviceAccountName: argo-hub-lucas.argo-workflows.0.0.2
+      serviceAccountName: argo-hub.argo-workflows.0.0.2
       metadata:
         annotations:
           argo-hub-template/description: 'A wrapper on top of argo cli submit operation'

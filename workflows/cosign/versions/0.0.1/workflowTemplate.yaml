@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.cosign.0.0.1
+  name: argo-hub.cosign.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Sign container images using Sigstore to verify their origin.'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: cosign
-      serviceAccountName: argo-hub-lucas.cosign.0.0.1
+      serviceAccountName: argo-hub.cosign.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Cosign cli image provided by bitnami'

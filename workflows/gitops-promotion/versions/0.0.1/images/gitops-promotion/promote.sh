@@ -3,7 +3,7 @@
 # corresponding file in another. Can also apply a new image or chart value directly, without copying it from a
 # source environment. Optionally creates a PR to gate the change.
 #
-# See the argo-hub-lucas.gitops-promotion Workflow Template for a complete list of input environment variables and full
+# See the argo-hub.gitops-promotion Workflow Template for a complete list of input environment variables and full
 # README documentaiton.
 #
 # ted.spinks@codefresh.io

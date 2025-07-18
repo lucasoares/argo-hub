@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.codefresh-csdp.0.0.1
+  name: argo-hub.codefresh-csdp.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Operate against Codefresh csdp platform'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: image-enricher-git
-      serviceAccountName: argo-hub-lucas.codefresh-csdp.0.0.1
+      serviceAccountName: argo-hub.codefresh-csdp.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Enrich codefresh image with PRs and Issues info'

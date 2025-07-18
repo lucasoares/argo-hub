@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.slack.0.0.3
+  name: argo-hub.slack.0.0.3
   annotations:
     argo-hub/version: '0.0.3'
     argo-hub/description: 'A template that enables Slack notifications'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: send-message
-      serviceAccountName: argo-hub-lucas.slack.0.0.3
+      serviceAccountName: argo-hub.slack.0.0.3
       metadata:
         annotations:
           argo-hub-template/description: 'Send a message to a Slack channel using a hook url'
@@ -52,7 +52,7 @@ spec:
           - name: SLACK_THREAD_TS
             value: '{{ inputs.parameters.SLACK_THREAD_TS }}'
     - name: post-to-channel
-      serviceAccountName: argo-hub-lucas.slack.0.0.3
+      serviceAccountName: argo-hub.slack.0.0.3
       metadata:
         annotations:
           argo-hub-template/description: 'Send a message to a Slack channel using the channel name or a user email'

@@ -35,7 +35,7 @@ spec:
       tasks:
       - name: image-enricher-git
         templateRef:
-          name: argo-hub-lucas.image-enricher-git.0.0.1
+          name: argo-hub.image-enricher-git.0.0.1
           template: image-enricher-git
         arguments:
           parameters:

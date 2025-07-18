@@ -19,7 +19,7 @@ no outputs
 ```
       - name: suspend
         templateRef:
-          name: argo-hub-lucas.argo-workflows.0.0.4
+          name: argo-hub.argo-workflows.0.0.4
           template: suspend-workflow
         arguments:
           parameters:

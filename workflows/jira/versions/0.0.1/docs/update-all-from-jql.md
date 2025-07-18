@@ -36,7 +36,7 @@ spec:
             tasks:
             -   name: update-all-from-jql
                 templateref:
-                    name: argo-hub-lucas.jira.0.0.1
+                    name: argo-hub.jira.0.0.1
                     template: update-all-from-jql
                 arguments:
                     parameters:

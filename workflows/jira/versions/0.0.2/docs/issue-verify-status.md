@@ -33,7 +33,7 @@ spec:
             tasks:
             -   name: issue-verify-status
                 templateref:
-                    name: argo-hub-lucas.jira.0.0.2
+                    name: argo-hub.jira.0.0.2
                     template: issue-verify-status
                 arguments:
                     parameters:

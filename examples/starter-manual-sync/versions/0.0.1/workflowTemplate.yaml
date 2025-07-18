@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.starter-manual-sync.0.0.1
+  name: argo-hub.starter-manual-sync.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'This Workflow Template is an example for post promotion workflow that sync, wait and send a slack message once the app is synced'
@@ -33,7 +33,7 @@ spec:
         tasks:
           - name: sync
             templateRef:
-              name: argo-hub-lucas.argocd.0.0.1
+              name: argo-hub.argocd.0.0.1
               template: sync
             arguments:
               parameters:
@@ -52,7 +52,7 @@ spec:
                   value: 'token'
           - name: wait
             templateRef:
-              name: argo-hub-lucas.argocd.0.0.1
+              name: argo-hub.argocd.0.0.1
               template: wait
             arguments:
               parameters:
@@ -72,7 +72,7 @@ spec:
             depends: sync
           - name: send-message
             templateRef:
-              name: argo-hub-lucas.slack.0.0.2
+              name: argo-hub.slack.0.0.2
               template: send-message
             arguments:
               parameters:

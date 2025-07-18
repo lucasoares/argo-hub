@@ -60,7 +60,7 @@ spec:
       tasks:
       - name: ci-simple
         templateRef:
-          name: argo-hub-lucas.ci-simple.0.0.1
+          name: argo-hub.ci-simple.0.0.1
           template: ci-tasks
         arguments:
           parameters:

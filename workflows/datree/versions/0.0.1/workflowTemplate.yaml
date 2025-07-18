@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.datree.0.0.1
+  name: argo-hub.datree.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'datree template'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: datree-policy-check
-      serviceAccountName: argo-hub-lucas.datree.0.0.1
+      serviceAccountName: argo-hub.datree.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Invokes scan using Datree'

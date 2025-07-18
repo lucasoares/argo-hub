@@ -41,7 +41,7 @@ spec:
       steps:
         - - name: send-message
             templateRef:
-              name: argo-hub-lucas.slack.0.0.3
+              name: argo-hub.slack.0.0.3
               template: post-to-channel
             arguments:
               parameters:
@@ -150,7 +150,7 @@ spec:
       steps:
         - - name: initial-message
             templateRef:
-              name: argo-hub-lucas.slack.0.0.3
+              name: argo-hub.slack.0.0.3
               template: post-to-channel
             arguments:
               parameters:
@@ -162,7 +162,7 @@ spec:
                   value: slack-token
         - - name: reply-message
             templateRef:
-              name: argo-hub-lucas.slack.0.0.3
+              name: argo-hub.slack.0.0.3
               template: post-to-channel
             arguments:
               parameters:
@@ -192,7 +192,7 @@ spec:
       steps:
         - - name: initial-message
             templateRef:
-              name: argo-hub-lucas.slack.0.0.3
+              name: argo-hub.slack.0.0.3
               template: post-to-channel
             arguments:
               parameters:
@@ -204,7 +204,7 @@ spec:
                   value: slack-token
         - - name: update-message
             templateRef:
-              name: argo-hub-lucas.slack.0.0.3
+              name: argo-hub.slack.0.0.3
               template: post-to-channel
             arguments:
               parameters:

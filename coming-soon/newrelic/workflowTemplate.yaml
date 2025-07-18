@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.newrelic
+  name: argo-hub.newrelic
   annotations:
     argo-hub/description: 'Execute operations against New Relic'
     argo-hub/categories: 'monitoring'

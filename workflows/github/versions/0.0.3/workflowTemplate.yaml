@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.github.0.0.3
+  name: argo-hub.github.0.0.3
   annotations:
     argo-hub/version: '0.0.3'
     argo-hub/description: 'Templates that execute operations against GitHub'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: commit-status
-      serviceAccountName: argo-hub-lucas.github.0.0.3
+      serviceAccountName: argo-hub.github.0.0.3
       metadata:
         annotations:
           argo-hub-template/description: 'Report a commit status check'
@@ -68,7 +68,7 @@ spec:
                 key: token
 
     - name: create-pr
-      serviceAccountName: argo-hub-lucas.github.0.0.3
+      serviceAccountName: argo-hub.github.0.0.3
       metadata:
         annotations:
           argo-hub-template/description: 'Create a pull request'
@@ -100,7 +100,7 @@ spec:
                 key: token
 
     - name: create-pr-comment
-      serviceAccountName: argo-hub-lucas.github.0.0.3
+      serviceAccountName: argo-hub.github.0.0.3
       metadata:
         annotations:
           argo-hub-template/description: 'Create a pull request comment'
@@ -135,7 +135,7 @@ spec:
                 key: '{{ inputs.parameters.GITHUB_TOKEN_SECRET_KEY }}'
 
     - name: extract-webhook-variables
-      serviceAccountName: argo-hub-lucas.github.0.0.3
+      serviceAccountName: argo-hub.github.0.0.3
       metadata:
         annotations:
           argo-hub-template/description: 'Parses the GitHub Event Payload (JSON) and output the most useful payload fields as artifact files.'

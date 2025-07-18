@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.port.1.1.0
+  name: argo-hub.port.1.1.0
   annotations:
     argo-hub/version: "1.1.0"
     argo-hub/description: "A template that executes operations against Port"
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: entity-get
-      serviceAccountName: argo-hub-lucas.port.1.1.0
+      serviceAccountName: argo-hub.port.1.1.0
       metadata:
         annotations:
           argo-hub-template/description: "Get a Port Entity based on it's identifier and output the response as artifacts"
@@ -83,7 +83,7 @@ spec:
               path: /tmp/portvars/PORT_ENTITY_RELATIONS
             globalName: PORT_ENTITY_RELATIONS
     - name: entity-upsert
-      serviceAccountName: argo-hub-lucas.port.1.1.0
+      serviceAccountName: argo-hub.port.1.1.0
       metadata:
         annotations:
           argo-hub-template/description: "Upsert a Port Entity according to the provided values"

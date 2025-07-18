@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.whitesource
+  name: argo-hub.whitesource
   annotations:
     argo-hub/description: 'Execute operations against WhiteSource'
     argo-hub/categories: 'security'

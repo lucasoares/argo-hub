@@ -34,7 +34,7 @@ spec:
       tasks:
       - name: close-sn-cr
         templateRef:
-          name: argo-hub-lucas.servicenow.1.3.1
+          name: argo-hub.servicenow.1.3.1
           template: closecr
         arguments:
           parameters:

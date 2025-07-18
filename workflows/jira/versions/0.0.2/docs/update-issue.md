@@ -36,7 +36,7 @@ spec:
             tasks:
             -   name: update-issue
                 templateref:
-                    name: argo-hub-lucas.jira.0.0.2
+                    name: argo-hub.jira.0.0.2
                     template: update-issue
                 arguments:
                     parameters:

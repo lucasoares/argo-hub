@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.codefresh-classic.0.0.1
+  name: argo-hub.codefresh-classic.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Templates that execute operations against the Codefresh classic platform'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: run-pipeline
-      serviceAccountName: argo-hub-lucas.codefresh-classic.0.0.1
+      serviceAccountName: argo-hub.codefresh-classic.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'A wrapper on top of Codefresh cli run operation'

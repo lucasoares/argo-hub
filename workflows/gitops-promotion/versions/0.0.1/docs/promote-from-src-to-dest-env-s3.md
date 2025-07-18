@@ -64,7 +64,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-kustomize-example
 spec:
-  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -73,7 +73,7 @@ spec:
           - name: git-clone
             # Output S3 artifact repo is called "repo"
             templateRef:
-              name: argo-hub-lucas.git.0.0.2
+              name: argo-hub.git.0.0.2
               template: clone-s3
             arguments:
               parameters:
@@ -83,7 +83,7 @@ spec:
                 value: git-auth
           - name: promote-kustomize-image
             templateRef:
-              name: argo-hub-lucas.gitops-promotion.0.0.1
+              name: argo-hub.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env-s3
             arguments:
               artifacts:
@@ -121,7 +121,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-helm-dependency-example
 spec:
-  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -130,7 +130,7 @@ spec:
           - name: git-clone
             # Output S3 artifact repo is called "repo"
             templateRef:
-              name: argo-hub-lucas.git.0.0.2
+              name: argo-hub.git.0.0.2
               template: clone-s3
             arguments:
               parameters:
@@ -140,7 +140,7 @@ spec:
                 value: git-auth
           - name: promote-helm-dependency
             templateRef:
-              name: argo-hub-lucas.gitops-promotion.0.0.1
+              name: argo-hub.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env-s3
             arguments:
               artifacts:
@@ -178,7 +178,7 @@ kind: WorkflowTemplate
 metadata:
   name: promotion-pipeline-example
 spec:
-  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   arguments:
     parameters:
@@ -198,7 +198,7 @@ spec:
           - name: git-clone
             # Output S3 artifact repo is called "repo"
             templateRef:
-              name: argo-hub-lucas.git.0.0.2
+              name: argo-hub.git.0.0.2
               template: clone-s3
             arguments:
               parameters:
@@ -211,7 +211,7 @@ spec:
           - name: promote-from-src-to-dest-env-s3
             depends: "set-commit-details.Succeeded && git-clone.Succeeded"
             templateRef:
-              name: argo-hub-lucas.gitops-promotion.0.0.1
+              name: argo-hub.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env-s3
             arguments:
               artifacts:
@@ -243,7 +243,7 @@ spec:
                   value: ".[[SVC_NAME]].image.tag"
           - name: create-pr
             templateRef:
-              name: argo-hub-lucas.github.0.0.4
+              name: argo-hub.github.0.0.4
               template: create-pr
             depends: "promote-from-src-to-dest-env-s3.Succeeded"
             when: "{{tasks.set-commit-details.outputs.parameters.create-pr}} == true"
@@ -308,7 +308,7 @@ kind: WorkflowTemplate
 metadata:
   name: simple-deployment-yaml-example
 spec:
-  serviceAccountName: argo-hub-lucas.gitops-promotion.0.0.1
+  serviceAccountName: argo-hub.gitops-promotion.0.0.1
   entrypoint: promotion-tasks
   templates:
     - name: promotion-tasks
@@ -317,7 +317,7 @@ spec:
           - name: git-clone
             # Output S3 artifact repo is called "repo"
             templateRef:
-              name: argo-hub-lucas.git.0.0.2
+              name: argo-hub.git.0.0.2
               template: clone-s3
             arguments:
               parameters:
@@ -327,7 +327,7 @@ spec:
                 value: git-auth
           - name: promote-image
             templateRef:
-              name: argo-hub-lucas.gitops-promotion.0.0.1
+              name: argo-hub.gitops-promotion.0.0.1
               template: promote-from-src-to-dest-env-s3
             arguments:
               artifacts:

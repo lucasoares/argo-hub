@@ -38,7 +38,7 @@ spec:
       tasks:
       - name: upgrade-cluster
         templateRef:
-          name: argo-hub-lucas.upgrade-cluster.0.0.1
+          name: argo-hub.upgrade-cluster.0.0.1
           template: upgrade
         arguments:
           parameters:

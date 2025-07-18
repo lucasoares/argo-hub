@@ -39,7 +39,7 @@ spec:
       tasks:
       - name: create-sn-cr
         templateRef:
-          name: argo-hub-lucas.servicenow.1.4.0
+          name: argo-hub.servicenow.1.4.0
           template: createcr
         arguments:
           parameters:
@@ -76,7 +76,7 @@ spec:
       tasks:
       - name: create-sn-cr
         templateRef:
-          name: argo-hub-lucas.servicenow.1.4.0
+          name: argo-hub.servicenow.1.4.0
           template: createcr
         arguments:
           parameters:

@@ -35,7 +35,7 @@ spec:
       tasks:
       - name: sync
         templateRef:
-          name: argo-hub-lucas.argocd.0.0.1
+          name: argo-hub.argocd.0.0.1
           template: sync
         arguments:
           parameters:
@@ -59,7 +59,7 @@ spec:
       tasks:
       - name: sync
         templateRef:
-          name: argo-hub-lucas.argocd.0.0.1
+          name: argo-hub.argocd.0.0.1
           template: sync
         arguments:
           parameters:
@@ -91,7 +91,7 @@ spec:
       tasks:
       - name: sync
         templateRef:
-          name: argo-hub-lucas.argocd.0.0.1
+          name: argo-hub.argocd.0.0.1
           template: sync
         arguments:
           parameters:

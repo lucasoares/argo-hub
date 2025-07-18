@@ -49,7 +49,7 @@ spec:
       tasks:
       - name: build-image
         templateRef:
-          name: argo-hub-lucas.kaniko.0.0.1
+          name: argo-hub.kaniko.0.0.1
           template: build
         arguments:
           parameters:

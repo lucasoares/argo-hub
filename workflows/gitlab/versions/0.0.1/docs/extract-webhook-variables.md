@@ -63,7 +63,7 @@ spec:
               spec:
                 workflowTemplateRef:
                   name: example-steps
-                serviceAccountName: argo-hub-lucas.gitlab.0.0.1
+                serviceAccountName: argo-hub.gitlab.0.0.1
                 arguments:
                   parameters:
                     - name: GITLAB_JSON
@@ -88,7 +88,7 @@ spec:
       # 1. Store GitLab info as global workflow outputs
       - - name: extract-webhook-variables
           templateRef:
-            name: argo-hub-lucas.gitlab.0.0.1
+            name: argo-hub.gitlab.0.0.1
             template: extract-webhook-variables
           arguments:
             parameters:

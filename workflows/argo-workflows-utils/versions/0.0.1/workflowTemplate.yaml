@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.argo-workflows-utils.0.0.1
+  name: argo-hub.argo-workflows-utils.0.0.1
   annotations:
     argo-hub/version: '0.0.1'
     argo-hub/description: 'Utility templates to help you enrich your Argo WorkflowTemplates'
@@ -16,7 +16,7 @@ metadata:
 spec:
   templates:
     - name: echo
-      serviceAccountName: argo-hub-lucas.argo-workflows-utils.0.0.1
+      serviceAccountName: argo-hub.argo-workflows-utils.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Print some text'
@@ -34,7 +34,7 @@ spec:
         args: ["{{ inputs.parameters.TEXT }}"]
 
     - name: globalize-variable
-      serviceAccountName: argo-hub-lucas.argo-workflows-utils.0.0.1
+      serviceAccountName: argo-hub.argo-workflows-utils.0.0.1
       metadata:
         annotations:
           argo-hub-template/description: 'Easily expose a new variable globally'

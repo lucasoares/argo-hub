@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.kubernetes
+  name: argo-hub.kubernetes
   annotations:
     argo-hub/description: 'Execute operations against a Kubernetes cluster'
     argo-hub/categories: 'deployment'

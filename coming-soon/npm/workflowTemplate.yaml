@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.npm
+  name: argo-hub.npm
   annotations:
     argo-hub/description: 'Execute npm operations'
     argo-hub/categories: 'registry,node'

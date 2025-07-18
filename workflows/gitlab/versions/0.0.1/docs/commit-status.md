@@ -37,7 +37,7 @@ spec:
         tasks:
         - name: report-commit-status-start
           templateRef:
-            name: argo-hub-lucas.gitlab.0.0.1
+            name: argo-hub.gitlab.0.0.1
             template: commit-status
           arguments:
             parameters:
@@ -63,7 +63,7 @@ spec:
           - - name: report-commits-status-failure
               when: '{{workflow.status}} =~ "Failed|Error"'
               templateRef:
-                name: argo-hub-lucas.gitlab.0.0.1
+                name: argo-hub.gitlab.0.0.1
                 template: commit-status
               arguments:
                 parameters:
@@ -87,7 +87,7 @@ spec:
           - - name: report-commits-status-success
               when: '{{workflow.status}} == Succeeded'
               templateRef:
-                name: argo-hub-lucas.gitlab.0.0.1
+                name: argo-hub.gitlab.0.0.1
                 template: commit-status
               arguments:
                 parameters:

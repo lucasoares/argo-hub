@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.aqua
+  name: argo-hub.aqua
   annotations:
     argo-hub/description: 'Execute operations against Aqua'
     argo-hub/categories: 'security'

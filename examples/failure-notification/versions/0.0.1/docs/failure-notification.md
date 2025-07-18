@@ -14,7 +14,7 @@ To utilize failure notification you will need to set the `spec.onExit` field to 
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: argo-hub-lucas.failure-notification-example.0.0.1
+  name: argo-hub.failure-notification-example.0.0.1
 spec:
   onExit: failure-notification # invoke pipeline-hook template at end of the workflow
 ```
@@ -54,7 +54,7 @@ We need to parse the information from the variable `workflow.failures` and outpu
 
 This template will run upon exit of the workflow. To make sure this is a failure notification we utilize the `when` parameter as `when: "{{workflow.status}} != Succeeded"`. This will make sure that only Errors / Failures will send the notification.
 
-This template first uses the parsing template of the failure. Then utilize the `send-message` template from `argo-hub-lucas.slack.0.0.2`.
+This template first uses the parsing template of the failure. Then utilize the `send-message` template from `argo-hub.slack.0.0.2`.
 
 ```yaml
 # After the completion of the entrypoint template, the status of the
@@ -68,7 +68,7 @@ This template first uses the parsing template of the failure. Then utilize the `
         when: "{{workflow.status}} != Succeeded"
     - - name: slack-notification
         templateRef:
-          name: argo-hub-lucas.slack.0.0.2
+          name: argo-hub.slack.0.0.2
           template: send-message
         arguments:
           parameters:
